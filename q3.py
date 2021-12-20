@@ -29,19 +29,28 @@ fatores = list()
 
 index = 0
 
+newN = number
+
 while (index < len(divisores_primos)):
-    print("%d / %d = %d" % (number, divisores_primos[index], (number / divisores_primos[index])))
-    if ((number / divisores_primos[index]) % divisores_primos[index] == 0):
+    # print("%d / %d = %d" % (number, divisores_primos[index], (number / divisores_primos[index])))
+    if ((newN / divisores_primos[index]) % divisores_primos[index] == 0):
         fatores.append(divisores_primos[index])
-        number = number / divisores_primos[index]
+        newN = newN / divisores_primos[index]
         continue
     else:
         fatores.append(divisores_primos[index])
-        number = number / divisores_primos[index]
+        newN = newN / divisores_primos[index]
         index = index + 1
         continue
 
-print(fatores)
+fatores_str = list()
+for m in fatores:
+    fatores_str.append(str(m))
+
+print("%d pode ser decomposto em:" % number)
+print(" * ".join(fatores_str))
+
+
 
 
 
