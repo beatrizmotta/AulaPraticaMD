@@ -36,5 +36,4 @@ numbers = numbers.split(' ')
 num1 = int(numbers[0])
 num2 = int(numbers[1])
 
-results = euclides(num1, num2, num1, num2)
-print(results)
+euclides(num1, num2, num1, num2)
